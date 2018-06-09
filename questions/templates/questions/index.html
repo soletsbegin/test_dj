@@ -1,0 +1,9 @@
+{% if questions_list %}
+    <ul>
+    {% for question in questions_list %}
+        <li><a href="/questions/{{ question.id }}/">{{ question.title }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
